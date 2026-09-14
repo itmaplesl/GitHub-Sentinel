@@ -1,0 +1,15 @@
+# {{ repository }} 更新报告
+
+> {{ period_start }} 至 {{ period_end }}
+
+## 摘要
+
+{{ summary }}
+
+## 动态
+
+{% for event in events -%}
+- [{{ event.event_type }}] [{{ event.title }}]({{ event.url }}) — {{ event.author }}
+{% else -%}
+- 本周期没有新动态。
+{% endfor %}
